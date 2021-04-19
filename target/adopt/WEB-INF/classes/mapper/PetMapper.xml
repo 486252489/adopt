@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.dao.PetMapper">
+    <!-- 实体类与数据库映射字段部分  start -->
+    <resultMap id="ResultMapItemCategory" type="club.pojo.Pet">
+        <result property="id" column="id"  jdbcType="INTEGER"/>
+        <result property="petName" column="petName"  jdbcType="VARCHAR"/>
+        <result property="petType" column="petType"  jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="allFields">id, petName, petType, sex, birthday, pic, state, remark</sql>
+
+    <select id="listBySqlReturnEntity" resultMap="ResultMapItemCategory">
+		${sql}
+    </select>
+
+
+</mapper>
