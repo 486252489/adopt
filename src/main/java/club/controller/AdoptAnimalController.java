@@ -29,6 +29,7 @@ import javax.annotation.Resource;
 public class AdoptAnimalController {
     @Resource
     private AdoptAnimalService adoptAnimalService;
+
     @Resource
     private PetService petService;
 
